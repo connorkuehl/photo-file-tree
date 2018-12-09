@@ -10,6 +10,8 @@ Example: `RootFolder/YEAR/MONTH/DAY/image_name.jpg`
 
 ### Flags/Options
 
-* `--dry-run` allows you to preview where the image will be moved without touching anything on disk.
+* `--dry-run` allows you to preview where the images will be moved without touching anything on disk.
 
-* `--root` is a required argument that tells the script where the top-level directory is to begin sorting the images to. If you specify `--root C:\Users\Connor\Pictures` then it will sort images to `C:\Users\Connor\Pictures\YEAR\MONTH\DAY\image.jpg`
+* `--root` is a required argument that tells the script where the top-level directory is to begin sorting the images to. If you specify `--root C:\Users\Connor\Pictures` then it will sort images to `C:\Users\Connor\Pictures\YEAR\MONTH\DAY\image.jpg`.
+
+* The remaining items passed to the script should be the images that you want sorted.
