@@ -62,6 +62,7 @@ for old_image_path in args.images:
     new_path = os.path.abspath(new_path)
     # Move the file to its new home
     if not args.dry_run:
+        os.makedirs(os.path.dirname(new_path), exist_ok=True)
         shutil.move(old_image_path, new_path)
     print(old_image_path + ' -> ' + new_path)
 
