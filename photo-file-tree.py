@@ -40,6 +40,11 @@ parser.add_argument(
     'images',
     nargs='+',
     help='The images to sort into the hierarchy located at ROOT')
+parser.add_argument(
+    '--prune',
+    required=False,
+    action='store_true',
+    help='Removes empty folders found under the photo ROOT')
 args = parser.parse_args()
 
 # argparse stores the arguments as a list. Even if it requires 1 argument, it is a list with
