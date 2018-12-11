@@ -71,5 +71,12 @@ for old_image_path in args.images:
         shutil.move(old_image_path, new_path)
     print(old_image_path + ' -> ' + new_path)
 
+if args.prune:
+    for root, subdirs, files in os.walk(root):
+        if not subdirs and not files:
+            print(root + ' is an empty folder')
+            if not args.dry_run:
+                os.rmdir(root)
+
 if args.dry_run:
     print('This was a dry run, nothing was moved.')
