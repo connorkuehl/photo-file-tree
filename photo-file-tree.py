@@ -38,7 +38,7 @@ parser.add_argument(
     help='The top-level folder of your photo collection')
 parser.add_argument(
     'images',
-    nargs='+',
+    nargs='*',
     help='The images to sort into the hierarchy located at ROOT')
 parser.add_argument(
     '--prune',
